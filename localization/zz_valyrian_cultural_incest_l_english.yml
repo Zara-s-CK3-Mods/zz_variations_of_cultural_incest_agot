@@ -1,0 +1,12 @@
+﻿l_english:
+tradition_zz_valyrian_incest_name: "Family Bindings"
+tradition_zz_valyrian_incest_desc:  "Dragons and Magic are much too powerful to risk falling into the hands of heathen cultures. Thus it is necessary and indeed proper to keep the women of one's family bound within the family by whatever means are necessary."
+
+tradition_zz_valyrian_sibling_incest_name: "Sibling Bonds"
+tradition_zz_valyrian_sibling_incest_desc: "To ensure control of the dragons of the family it is needed to bind the womenfolk of the familiy to the family proper. Some like the house Targaryen have adopted the praxis of wedding brother to sister and thus keeping the dragons within the family alone."
+culture_parameter_consanguinity_unrestricted_marriage: "Marriage between all family members is allowed"
+culture_parameter_consanguinity_siblings_marriage: "Marriage between all siblings is allowed"
+culture_parameter_consanguinity_unrestricted_incest: "Sexual relations between any family members will not give the incest [secret|E]"
+culture_parameter_allows_cousin_marriage: ""
+culture_parameter_allows_aunt_nephew_and_uncle_niece_marriage: ""
+culture_parameter_allows_unrestricted_marriage: ""

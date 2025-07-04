@@ -1,0 +1,103 @@
+﻿tradition_zz_valyrian_incest = {
+	category = ritual
+	
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = greeting.dds
+	}
+	
+	is_shown = {
+		always = yes
+	}
+	
+	can_pick = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_valyrian_sibling_incest = { is_in_list = traits }
+			}
+		}
+	}
+	
+	can_pick_for_hybridization = {
+		always = yes
+	}
+
+	parameters = {
+		consanguinity_unrestricted_marriage = yes
+		consanguinity_unrestricted_incest = yes
+		allows_cousin_marriage = yes
+		allows_aunt_nephew_and_uncle_niece_marriage = yes
+		allows_unrestricted_marriage = yes
+	}
+	
+	cost = {
+		prestige = 1000
+	}
+	
+	ai_will_do = { 
+		value = 50
+		if = {
+			limit = {
+				scope:character = {
+					exists = scope:lover
+					relation_with_character_is_incestuous_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lover }
+				}
+			}
+			multiply = 20
+		}
+	}
+}
+
+tradition_zz_valyrian_sibling_incest = {
+	category = ritual
+	
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = greeting.dds
+	}
+	
+	is_shown = {
+		always = yes
+	}
+	
+	can_pick = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_valyrian_incest = { is_in_list = traits }
+			}
+		}
+	}
+	
+	can_pick_for_hybridization = {
+		always = yes
+	}
+
+	parameters = {
+		consanguinity_siblings_marriage = yes
+		consanguinity_unrestricted_incest = yes
+		allows_cousin_marriage = yes
+		allows_aunt_nephew_and_uncle_niece_marriage = yes
+		allows_unrestricted_marriage = yes
+	}
+	
+	cost = {
+		prestige = 1000
+	}
+	
+	ai_will_do = { 
+		value = 50
+		if = {
+			limit = {
+				scope:character = {
+					exists = scope:lover
+					relation_with_character_is_incestuous_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lover }
+				}
+			}
+			multiply = 20
+		}
+	}
+}
