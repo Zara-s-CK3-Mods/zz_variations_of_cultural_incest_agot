@@ -42,12 +42,7 @@
                 #}
             }
             culture = {
-				has_cultural_parameter = consanguinity_unrestricted_marriage
-				culture_allows_marriage_consanguinity_trigger = { 
-					CHARACTER_1 = scope:can_marry_check
-					CHARACTER_2 = $CHARACTER$
-				}
-				
+				has_cultural_parameter = consanguinity_unrestricted_marriage				
 			}
         }
 	}
@@ -66,10 +61,6 @@
             }
             $CHARACTER$.culture = {
 				has_cultural_parameter = consanguinity_unrestricted_marriage
-				culture_allows_marriage_consanguinity_trigger = { 
-					CHARACTER_1 = scope:can_marry_check
-					CHARACTER_2 = $CHARACTER$
-				}
 			}
         }
 	}
@@ -220,20 +211,6 @@ relation_with_character_is_incestuous_in_faith_trigger = {
 		}
 	}
 }
-
-culture_allows_marriage_consanguinity_trigger = {
-    save_temporary_scope_as = consanguinity_culture
-
-	NOT = {
-		$CHARACTER_1$ = {
-			relation_with_character_is_incestuous_in_faith_trigger = {
-				CHARACTER = $CHARACTER_2$
-				FAITH = scope:consanguinity_culture
-			}
-		}
-	}
-}
-
 
 secret_incest_is_valid_trigger = {
 	$OWNER$ = {
