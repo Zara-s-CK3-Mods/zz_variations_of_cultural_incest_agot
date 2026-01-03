@@ -155,7 +155,7 @@ agot_adelphogamous_incest_allowed = {
 	}
     trigger_else_if = {
 		limit = { exists = house }
-		culture = { has_cultural_parameter = consanguinity_siblings }
+		culture = { has_cultural_parameter = consanguinity_siblings_marriage }
 	}
 	#trigger_else_if = { #AGOT TODO might be a valyrian parameter
 	#	limit = { exists = house }
